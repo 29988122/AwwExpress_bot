@@ -1,0 +1,10 @@
+[Unit]
+Description=AwwExpressBot
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nohup /usr/bin/python /home/a29988122/Documents/AwwExpressbot.py &
+WorkingDirectory=/home/a29988122/Documents
+
+[Install]
+WantedBy=multi-user.target
