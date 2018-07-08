@@ -1,10 +1,15 @@
 [Unit]
-Description=AwwExpressBot
+Description=AwwExpress_bot
+After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/nohup /usr/bin/python /home/a29988122/Documents/AwwExpressbot.py &
+ExecStartPre=/bin/bash --login -c 'env > /home/a29988122/Documents/.magic-environment-file'
+EnvironmentFile=-/home/a29988122/Documents/.magic-environment-file
+ExecStart=/usr/bin/python /home/a29988122/Documents/AwwExpress_bot.py
+#/usr/bin/nohup /usr/bin/python /home/a29988122/Documents/AwwExpress_bot.py &
 WorkingDirectory=/home/a29988122/Documents
+User=a29988122
 
 [Install]
 WantedBy=multi-user.target
