@@ -1,0 +1,6 @@
+youtube-dl
+telegram
+python-telegram-bot
+requests
+configparser
+dropbox

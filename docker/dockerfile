@@ -7,10 +7,11 @@ RUN pip install python-telegram-bot
 RUN pip install requests
 RUN pip install configparser
 RUN pip install dropbox
+RUN apt-get ffmpeg
 
 WORKDIR /home
 
-COPY ./AwwExpress_bot.py /home
-COPY ./config.ini /home
+COPY ../AwwExpress_bot.py /home
+COPY ../config.ini /home
 
 CMD python AwwExpress_bot.py
