@@ -49,7 +49,7 @@ def vreddit(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text="안녕하세요, 저는 AwwExpress_bot입니다. 잠시만 기다려주세요!")
 
     #youtube-dl
-    dlprocess = subprocess.Popen(["youtube-dl", redditurl, "--restrict-filenames"], stderr=PIPE, bufsize=1, universal_newlines=True)
+    dlprocess = subprocess.Popen(["youtube-dl", redditurl, "--no-warnings", "--restrict-filenames"], stderr=PIPE, bufsize=1, universal_newlines=True)
     out, err = dlprocess.communicate()
     if err:
         print(err)
