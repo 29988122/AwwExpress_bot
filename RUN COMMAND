@@ -1,0 +1,1 @@
+docker run -td --restart always a29988122/awwexpress_bot
