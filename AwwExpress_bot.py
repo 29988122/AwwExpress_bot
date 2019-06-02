@@ -56,7 +56,7 @@ def vreddit(bot, update):
         bot.send_message(chat_id=update.message.chat_id, text=err)
         return
     else:
-        bot.send_message(chat_id=update.message.chat_id, text="File downloaded successfully from reddit.\nI live beside reddit\"s server room, that\"s the secret.\nI\"m quite fast, right?")
+        bot.send_message(chat_id=update.message.chat_id, text="File downloaded successfully from reddit.\nI live beside reddit\'s server room, that\'s the secret.\nI\'m quite fast, right?")
 
     #fetch filename and pass to streamable
     youtubeoutputstring = check_output(["youtube-dl", redditurl, "--no-warnings", "--restrict-filenames", "--get-filename"], universal_newlines=True)
